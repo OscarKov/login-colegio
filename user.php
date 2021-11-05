@@ -1,19 +1,24 @@
 <?php
 // template head.
 require_once('resources/global/head.php');
-?>
 
-<section class="section">
-    <div class="intro-card frame my-5">
-        <div class="frame__body row u-justify-center">
-            <div class="col-sm-6">
-                <h2>Bienvenido, <?php echo $_SESSION['nombre'] ?></h2>
-                <button class="button"></button>
-            </div>
-        </div>
-    </div>
-</section>
+function displayUserView() {
+    $userData = [
+        'name' => $_SESSION['name']
+    ];
 
-<?php
+    include_once('resources/views/user.view.php');
+}
+
+function redirectToLogin() {
+    header('Location: /login.php');
+}
+
+if (!$_SESSION) {
+    redirectToLogin();
+}
+displayUserView();
+
+
 // template head.
 require_once('resources/global/footer.php');

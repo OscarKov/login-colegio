@@ -46,9 +46,8 @@ class AuthHelper
 
     private function generateSession($userData)
     {
-        session_start();
-
-        $_SESSION['nombre'] = $userData['name'];
+        $_SESSION['name'] = $userData['name'];
+        $_SESSION['email'] = $userData['email'];
         $_SESSION['tiempo_inicio'] = time();
     }
 
