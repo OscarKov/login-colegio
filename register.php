@@ -10,7 +10,7 @@ use Helpers\Auth\AuthHelper;
 include_once('resources/global/head.php');
 // ruta del template de registro.
 
-// Registro de usuario.
+// Maneja el intento de registro.
 function registerAttempt()
 {
     $alertData = [
@@ -39,6 +39,7 @@ function registerAttempt()
     include_once('resources/components/alert.php');
 }
 
+// Carga el formulario de registro.
 function registerForm()
 {
     include_once('resources/views/register.view.php');

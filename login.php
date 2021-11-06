@@ -35,6 +35,7 @@ function loginAttempt()
     include_once('resources/components/alert.php');
 }
 
+// carga el formulario de login.
 function loginForm()
 {
     include_once('resources/views/login.view.php');
@@ -49,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 if ($_SESSION) {
     header('Location: /user.php');
 }
-
+// si no, retorna el formulario.
 loginForm();
 
 // template footer.

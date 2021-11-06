@@ -2,15 +2,20 @@
 // template head.
 require_once('resources/global/head.php');
 
-function displayUserView() {
+// Carga la vista del usuario logueado.
+function displayUserView()
+{
     $userData = [
         'name' => $_SESSION['name']
     ];
 
+    include_once('resources/components/navbar.php');
     include_once('resources/views/user.view.php');
 }
 
-function redirectToLogin() {
+// Envia al login.
+function redirectToLogin()
+{
     header('Location: /login.php');
 }
 

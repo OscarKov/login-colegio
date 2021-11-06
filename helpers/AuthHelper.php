@@ -15,6 +15,7 @@ class AuthHelper
         $this->connector = new Connector;
     }
 
+    // Busca al usuario por email.
     function findByEmail($email)
     {
         $sql = "SELECT id, name, email, password FROM users WHERE email = ?";
@@ -30,6 +31,7 @@ class AuthHelper
         }
     }
 
+    // Loguea al usuario.
     public function loginUser($loginData)
     {
         $user = $this->findByEmail($loginData['email']);
@@ -44,6 +46,7 @@ class AuthHelper
         return false;
     }
 
+    // Genera la sesión del usuario
     private function generateSession($userData)
     {
         $_SESSION['name'] = $userData['name'];
@@ -51,6 +54,7 @@ class AuthHelper
         $_SESSION['tiempo_inicio'] = time();
     }
 
+    // Termina la session actual.
     public function logout()
     {
         if (isset($_SESSION)) {
@@ -58,6 +62,7 @@ class AuthHelper
         }
     }
 
+    // Registra al usuario.
     public function registerUser($registerData)
     {
         $user = $this->findByEmail($registerData['email']);
