@@ -8,7 +8,8 @@ use Helpers\Auth\AuthHelper;
 
 // template head.
 include_once('resources/global/head.php');
-// ruta del template de registro.
+
+include_once('resources/components/navbar.php');
 
 // Maneja el intento de registro.
 function registerAttempt()

@@ -1,4 +1,4 @@
-<section class="section">
+<section class="section pt-4">
     <div class="intro-card frame my-5">
         <div class="frame__body row u-justify-center">
             <div class="col-sm-6">

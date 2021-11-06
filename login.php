@@ -9,6 +9,8 @@ use Helpers\Auth\AuthHelper;
 // template head.
 include_once('resources/global/head.php');
 
+include_once('resources/components/navbar.php');
+
 // Registro de usuario.
 function loginAttempt()
 {
